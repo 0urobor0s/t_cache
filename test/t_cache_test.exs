@@ -7,6 +7,6 @@ defmodule TCacheTest do
   end
 
   test "cache_component/1" do
-    assert TCache.cache_component("mail") == {"", ""}
+    assert {%Phoenix.LiveView.Rendered{static: [""]}, ""} = TCache.cache_component("mail")
   end
 end
